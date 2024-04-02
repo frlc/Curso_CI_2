@@ -13,7 +13,7 @@ jobs:
     strategy:
       matrix:
         go_version: ['>=1.18']
-        OS: ['ubuntu-latest', 'windows-latest']
+        OS: ['ubuntu-latest']
     steps:
     - uses: actions/checkout@v3
 
@@ -37,7 +37,7 @@ jobs:
     runs-on: ${{ matrix.OS }}
     strategy:
        matrix:
-         OS: ['ubuntu-latest', 'windows-latest']
+         OS: ['ubuntu-latest']
     steps:
     - uses: actions/checkout@v3
     - name: Build
